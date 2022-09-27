@@ -79,3 +79,21 @@ searchBTN.addEventListener("click", function () {
         mainDiv.append(statusP)
     }
 })
+
+
+
+setInterval(function () {
+    let time = document.querySelector(".time")
+    let d = new Date();
+    let hour = d.getHours() + "", minute = d.getMinutes() + "", second = d.getSeconds() + "";
+    if(d.getHours() < 10)
+        hour = "0" + d.getHours()
+    if(d.getMinutes() < 10)
+        minute = "0" + d.getMinutes()
+    if(d.getSeconds() < 10)
+        second = "0" + d.getSeconds()
+    time.innerHTML = d.getFullYear() + "/" + d.getMonth() + "/" + d.getDay() + "       " + hour + ":" + minute + ":" + second;
+    time.addEventListener("change", function () {
+        time.innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    })
+}, 1000)
