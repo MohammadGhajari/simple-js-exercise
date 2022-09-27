@@ -11,6 +11,7 @@ body {
     background-image: url("sky_clouds-wallpaper-1920x1080.jpg");
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
@@ -65,4 +66,14 @@ body {
 }
 p{
     margin-left: 1.5rem;
+}
+.time {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 15%;
+    height: 5%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
