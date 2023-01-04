@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Muli", sans-serif;
+}
+body {
+    backdrop-filter: brightness(50%);
+    width: 100vw;
+    height: 100vh;
+    background-image: url("sky_clouds-wallpaper-1920x1080.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+
+}
+.all {
+    width: 40%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.searchBar {
+    margin-top: 2rem;
+    /*margin-bottom: 1rem;*/
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.searchBar input, .searchBar button{
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    margin-right: 0;
+}
+.searchBar input {
+    padding-left: 10px;
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.3rem;
+}
+.searchBar:focus {
+    border: none;
+ }
+.searchBar input::placeholder {
+    font-size: 1rem;
+    color: white;
+}
+.searchBar button {
+    width: 10%;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.searchBar button:hover {
+    width: 12%;
+    background-color: rgba(30, 30, 30, 0.5);
+    cursor: pointer;
+}
+#searchStatus {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+.afterSearchClick {
+    height: 50%;
+}
+p{
+    margin-left: 1.5rem;
+}
+.time {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 15%;
+    height: 5%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightModAll {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+.timeLight {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 16px;
+    width: 58px;
+    height: 32px;
+    position: absolute;
+    vertical-align: middle;
+    transition: background 0.25s;
+    top: 20px;
+    right: 20px;
+}
+.toggle-switch:before, .toggle-switch:after {
+    content: "";
+}
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background: #56c080;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+    left: 30px;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
